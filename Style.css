@@ -1,0 +1,136 @@
+/* --- DESIGN SYSTEM & VARIÁVEIS --- */
+:root {
+    --primary: #000000;
+    --secondary: #ffffff;
+    --accent: #333333;
+    --text-color: #212121;
+    --bg-color: #f4f4f4;
+    --radius: 8px;
+    --gap: 1.5rem;
+    --transition: 0.4s ease;
+    --font-base: 16px;
+}
+
+/* --- MODO ALTO CONTRASTE --- */
+body.high-contrast {
+    --primary: #ffff00;
+    --secondary: #000000;
+    --bg-color: #000000;
+    --text-color: #ffffff;
+    --accent: #ffff00;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-size: var(--font-base);
+    background: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background 0.3s, font-size 0.2s;
+}
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* --- NAVEGAÇÃO & ACESSIBILIDADE --- */
+.a11y-controls {
+    background: var(--primary);
+    padding: 5px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.a11y-controls button {
+    cursor: pointer;
+    background: var(--secondary);
+    border: none;
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+header {
+    background: var(--primary);
+    color: var(--secondary);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo { height: 50px; }
+
+header ul { display: flex; list-style: none; gap: 20px; }
+header a { color: inherit; text-decoration: none; font-weight: bold; }
+
+/* --- GRID SYSTEM (Flexibilidade de edição aqui) --- */
+.grid-container {
+    display: grid;
+    /* Desktop: 3 colunas | Tablet: 2 colunas | Mobile: 1 coluna */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--gap);
+    margin-top: 2rem;
+}
+
+.card {
+    background: var(--secondary);
+    padding: 20px;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+/* --- CARROSSEL --- */
+.carousel { overflow: hidden; position: relative; margin-top: 2rem; }
+.carousel-inner {
+    display: flex;
+    transition: transform var(--transition);
+}
+.carousel-item {
+    min-width: 100%;
+    padding: 40px;
+    background: var(--accent);
+    color: white;
+    text-align: center;
+}
+
+/* --- ACORDEÃO --- */
+.accordion-header {
+    width: 100%;
+    padding: 15px;
+    text-align: left;
+    background: var(--primary);
+    color: var(--secondary);
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.accordion-content {
+    padding: 15px;
+    background: white;
+    border: 1px solid #ddd;
+}
+
+/* --- ANIMAÇÕES (Scroll Reveal) --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+section { padding: 4rem 0; }
