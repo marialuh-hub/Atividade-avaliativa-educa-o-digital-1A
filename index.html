@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S.C. Corinthians Paulista | Orgulho Alvinegro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="accessibility-bar" aria-label="Controles de Acessibilidade">
+        <button onclick="toggleContrast()" aria-label="Alternar Alto Contraste">Alto Contraste</button>
+        <button onclick="changeFontSize('increase')" aria-label="Aumentar fonte">A+</button>
+        <button onclick="changeFontSize('decrease')" aria-label="Diminuir fonte">A-</button>
+    </nav>
+
+    <header>
+        <div class="container header-content">
+            <img src="https://images.tcdn.com.br/img/img_prod/1041131/corinthians_escudo_logo_bordado_termocolante_unidade_177_1_2522778f699ca906e534eb2e29e92bc4.jpg" alt="Escudo do Corinthians" class="logo">
+            <nav aria-label="Menu Principal">
+                <ul>
+                    <li><a href="#historia">História</a></li>
+                    <li><a href="#titulos">Títulos</a></li>
+                    <li><a href="#elenco">Elenco</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="reveal" aria-roledescription="carousel" aria-label="Destaques do Timão">
+            <div id="carousel-container" class="carousel">
+                </div>
+            <div class="carousel-controls">
+                <button onclick="moveCarousel(-1)" aria-label="Slide anterior">❮</button>
+                <button onclick="moveCarousel(1)" aria-label="Próximo slide">❯</button>
+            </div>
+        </section>
+
+        <section id="titulos" class="container reveal">
+            <h2>Nossas Conquistas</h2>
+            <div id="grid-titulos" class="grid-container">
+                </div>
+        </section>
+
+        <section id="info" class="container reveal">
+            <h2>Dúvidas Frequentes (Fiel Torcedor)</h2>
+            <div id="accordion-group">
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sport Club Corinthians Paulista. Vai Corinthians!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
